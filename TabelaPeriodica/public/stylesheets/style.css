@@ -1,0 +1,266 @@
+* {
+  margin:0;
+  padding:0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,body {
+  background: black;
+  font-weight: normal;
+  height: 100%;
+}
+
+table{
+  margin-top: 50px;
+  font-size: large;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: #fff;
+  
+}
+
+a{
+ color: inherit; 
+ text-decoration: none;
+}
+
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+div{
+  width:500px;
+  margin:40px auto;
+}
+
+footer {
+  font-size: large;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.elements{
+  width:auto;
+  margin:auto;
+}
+
+
+p {
+  font-size:140px;
+  font-family: sans-serif;
+  color: #fff;
+  margin:0;
+}
+
+.seasonNum,.episodeNum {
+  font-size:14px;
+  display:inline-block;
+  position: absolute;
+  margin-left:165px;
+}
+
+.episodeNum {
+  margin-left:170px;
+}
+
+.bad {
+  margin:24px 189px;
+}
+
+
+
+.B {
+  padding:10px;
+  background:green;
+  border:3px solid #fff;
+  width:200px;
+  height:200px;
+  background: #46a08c; /* Old browsers */
+  background: -webkit-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -moz-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -o-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);  
+}
+
+.br {
+  
+  padding:10px 22px;
+ 
+}
+
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color:black;
+  overflow: auto;
+  margin-top: 0;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background:green;
+  background: #46a08c; /* Old browsers */
+  background: -webkit-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -moz-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -o-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+   box-shadow:inset 0px 2px 2px rgba(50,50,50,.6); }
+
+/* Current/active navbar link */
+.active {
+  background:green;
+  background: #46a08c; /* Old browsers */
+  background: -webkit-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -moz-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -o-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);  
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* ELEMENTS*/
+#periodic-table
+{
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(7, 1fr)
+    [separator-start] 0.25fr
+    [separator-end lanthanides-start] 1fr
+    [lanthanides-end actinides-start] 1fr
+    [actinides-end];
+  grid-gap: 0.125em;
+  list-style: none;
+  padding: 0;
+  font: 1em/1 Calibri, sans-serif;
+  counter-reset: atomic-number;
+}
+
+#periodic-table li
+{
+ 
+  background:green;
+  border:3px solid #fff;
+  background: #46a08c; /* Old browsers */
+  background: -webkit-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -moz-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: -o-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+  box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);  
+
+
+  color: white;
+  padding: 0.5em 0.125em;
+  text-align: center;
+  counter-increment: atomic-number;
+}
+
+#periodic-table li:nth-of-type(2)
+{
+  grid-column: 18;
+}
+
+#periodic-table li:nth-of-type(5),
+#periodic-table li:nth-of-type(13)
+{
+  grid-column: 13;
+}
+
+#periodic-table li:nth-of-type(n+58):nth-of-type(-n+71)
+{
+  grid-row: lanthanides;
+}
+
+#periodic-table li:nth-of-type(n+90):nth-of-type(-n+103)
+{
+  grid-row: actinides;
+}
+
+#periodic-table::before
+{
+  content: '';
+  grid-row: lanthanides / actinides;
+  grid-column: 1 / span 3;
+}
+
+@media (min-width: 60em)
+{
+  #periodic-table li::before
+  {
+    content: counter(atomic-number, decimal);
+    font-size: 0.75em;
+    vertical-align: sub;
+  }
+}
+
+@media (min-width: 72em)
+{
+  #periodic-table li
+  {
+    font-size: 1.2em;
+  }
+  
+  #periodic-table li::before,
+  #periodic-table li::after
+  {
+    font-size: 0.5em;
+  }
+  
+  #periodic-table li::after
+  {
+    content: attr(title);
+    display: block;
+    margin-top: 0.5em;
+  }
+}
+
+@media (min-width: 90em)
+{
+  #periodic-table li
+  {
+    font-size: 1.5em;
+  }
+}
+
+/*TITLES*/
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #46a08c, 0 0 40px #46a08c, 0 0 50px #46a08c, 0 0 60px #46a08c, 0 0 70px #46a08c, 0 0 80px #46a08c;
+  }
+}

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .navbar
+      a(href='/')
+        i.fa.fa-fw.fa-home
+        |  HomePage
+      a(href='/periodictable/elements')
+        i.fas.fa-vial
+        |  Elements
+      a.active(href='/periodictable/groups')
+        i.fa.fa-fw.fa-flask
+        |  Groups
+      a(href='/periodictable/periods')
+        i.fa.fa-fw.fa-atom
+        |  Periods
+  h1.glow= "Groups"
+
+  table.table 
+    thead
+        tr
+            th #
+            th Name   
+    tbody
+        each g in groups 
+            tr
+                td= g.Number
+                td
+                    a(href='/periodictable/group/'+g.Number)=g.Name
